@@ -58,7 +58,7 @@ Contributions:
 
 Example:
 --------
-<p><small>Simple example project <a target="_blank" href="https://github.com/minority4u/keras_flask_deployment">Example datascience project build on tensorflow and flask</a>. #tensorflow # flask</small></p>
+<p><small>Example project <a target="_blank" href="https://github.com/minority4u/keras_flask_deployment">Example datascience project build on tensorflow and flask</a>. #tensorflow # flask</small></p>
 
 
 Setup native with OSX and Ubuntu

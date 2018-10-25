@@ -1,3 +1,19 @@
+# Modified Cookiecutter Data Science template
+
+This repository is a modified coockiecutter template for docker based deployment of trained models.
+- added simple docker and docker-compose-files, extended the Makefile with virtualenv
+- Example usage of this template:
+
+<p><small>Example usage: <a target="_blank" href="https://github.com/minority4u/keras_flask_deployment">Datascience project build on tensorflow and flask</a>. #tensorflow # flask</small></p>
+
+----
+
+[Original-Repository](https://github.com/drivendata/cookiecutter-data-science)
+All Contributions belong to them.
+
+No warranty on the this repo is given!
+
+Original Readme and usage of cookicutter:
 # Cookiecutter Data Science
 
 _A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
