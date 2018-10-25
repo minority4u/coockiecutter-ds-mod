@@ -80,3 +80,13 @@ target/
 
 # Mac OS-specific storage files
 .DS_Store
+venv/
+venv\
+venv
+*.env
+output.png
+
+*.h
+*.c
+*.h
+output.png

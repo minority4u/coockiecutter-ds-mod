@@ -51,7 +51,81 @@ Project Organization
     │
     └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 
-
+Contributions:
 --------
-
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+
+
+Example:
+--------
+<p><small>Simple example project <a target="_blank" href="https://github.com/minority4u/keras_flask_deployment">Example datascience project build on tensorflow and flask</a>. #tensorflow # flask</small></p>
+
+
+Setup native with OSX and Ubuntu
+------------
+
+- Precondition Python 3.6 locally installed
+(e.g.:  <a target="_blank" href="https://www.anaconda.com/download/#macos">Anaconda</a>)
+
+
+- clone repository
+```
+git clone https://github.com/minority4u/keras_flask_deployment
+cd keras_flask_deployment
+```
+
+- Install all Dependencies, and start the app (all in one), works with OSX and Linux
+```
+make run
+```
+
+Setup native with Windows
+------------
+
+- Precondition Python 3.6 locally installed
+(e.g.:  <a target="_blank" href="https://www.anaconda.com/download/#macos">Anaconda</a>)
+
+- Clone Repository
+```
+git clone https://github.com/minority4u/keras_flask_deployment
+cd keras_flask_deployment
+```
+
+```
+pip install virtualenv
+virtualenv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+python src\app\app.py
+```
+
+Setup Docker
+------------
+
+- Precondition: Installed Docker Deamon (e.g.:  <a target="_blank" href="https://docs.docker.com/install/">Docker CE</a>)
+
+- Make sure you have docker-compose installed (e.g.:  <a target="_blank" href="https://docs.docker.com/compose/install/">Docker-Compose</a>)
+
+- Clone Repository
+```
+git clone https://github.com/minority4u/keras_flask_deployment
+cd keras_flask_deployment
+```
+- Create and run Docker-Container
+```
+docker-compose -up docker-compose.yml
+```
+
+
+Train new Model
+------------
+
+- OSX/Linux
+```
+make train
+```
+
+- Windows
+```
+Python src\models\train_model.py
+```

@@ -5,10 +5,10 @@
 #################################################################################
 
 PROJECT_DIR := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
-BUCKET = {{ cookiecutter.s3_bucket }}
-PROFILE = {{ cookiecutter.aws_profile }}
-PROJECT_NAME = {{ cookiecutter.repo_name }}
-PYTHON_INTERPRETER = {{ cookiecutter.python_interpreter }}
+BUCKET = [OPTIONAL] your-bucket-for-syncing-data (do not include 's3://')
+PROFILE = default
+PROJECT_NAME = keras_flask_deployment
+PYTHON_INTERPRETER = python3
 
 ifeq (,$(shell which conda))
 HAS_CONDA=False
@@ -20,10 +20,24 @@ endif
 # COMMANDS                                                                      #
 #################################################################################
 
+## Train new model
+train: requirements
+	. venv/bin/activate ; \
+	python src/models/train_model.py
+
 ## Install Python Dependencies
 requirements: test_environment
-	pip install -U pip setuptools wheel
-	pip install -r requirements.txt
+	pip install virtualenv
+	virtualenv venv
+	. venv/bin/activate ; \
+	venv/bin/pip install -U pip setuptools wheel
+	venv/bin/pip install -r requirements.txt
+
+
+## setup, activate and deploy flask locally
+run: requirements
+	. venv/bin/activate ; \
+	python src/app/app.py
 
 ## Make Dataset
 data: requirements
@@ -59,7 +73,7 @@ create_environment:
 ifeq (True,$(HAS_CONDA))
 		@echo ">>> Detected conda, creating conda environment."
 ifeq (3,$(findstring 3,$(PYTHON_INTERPRETER)))
-	conda create --name $(PROJECT_NAME) python=3
+	conda create --name $(PROJECT_NAME) python=3.6
 else
 	conda create --name $(PROJECT_NAME) python=2.7
 endif
