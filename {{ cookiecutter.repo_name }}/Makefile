@@ -28,8 +28,12 @@ train: requirements
 ## Install Python Dependencies
 requirements: test_environment
 	pip install virtualenv
-	virtualenv venv
-	. venv/bin/activate ; \
+	if [ -d "./venv" ]; then\
+		echo ">>> venv already exists"; \
+	else \
+		virtualenv venv; \
+	fi
+	. venv/bin/activate
 	venv/bin/pip install -U pip setuptools wheel
 	venv/bin/pip install -r requirements.txt
 
