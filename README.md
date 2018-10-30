@@ -2,8 +2,9 @@
 
 This repository is a modified coockiecutter template for docker based deployment of trained keras models.
 - Added simple docker and docker-compose-files, 
-- extended the Makefile with virtualenv for platform independent usage
+- Extended the Makefile with virtualenv for platform independent usage
 - Merged an keras-flask project in this template as example.
+- Added some setup hints in the generated Readme for faster usage of the project
 
 <p><small>Example usage: <a target="_blank" href="https://github.com/minority4u/keras_flask_deployment">Datascience project build on tensorflow and flask</a>. #tensorflow # flask</small></p>
 
