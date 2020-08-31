@@ -3,7 +3,7 @@
 
 # set the project root as working directory for all jupyter notebooks 
 # external requirements
--i https://test.pypi.org/simple/
+--extra-index-url https://test.pypi.org/simple/projectroot
 ProjectRoot
 
 # standard libs
