@@ -7,9 +7,6 @@
 ProjectRoot
 
 # standard libs
-jupyterlab
-matplotlib
-numpy
-pandas
+
 
 
