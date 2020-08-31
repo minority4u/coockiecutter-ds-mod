@@ -45,7 +45,7 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
-    cookiecutter https://github.com/minority4u/coockiecutter-ds-mod
+    cookiecutter https://github.com/Cardio-AI/coockiecutter-ds-mod
 
 
 [![asciicast](https://asciinema.org/a/9bgl5qh17wlop4xyxu9n9wr02.png)](https://asciinema.org/a/9bgl5qh17wlop4xyxu9n9wr02)
